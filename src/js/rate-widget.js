@@ -1,29 +1,34 @@
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const openModalBtn = document.querySelector('.btn-open');
-const closeModalBtn = document.querySelector('.btn-close');
+// (() => {
+//   const refs = {
+//     openMobileMenuBtn: document.querySelector('[data-mobile-menu-open]'),
+//     closeMobileMenuBtn: document.querySelector('[data-mobile-menu-close]'),
+//     mobileMenu: document.querySelector('[data-mobile-menu]'),
+//   };
 
-// close modal function
-const closeModal = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
+//   refs.openMobileMenuBtn.addEventListener('click', toggleMobileMenu);
+//   refs.closeMobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+//   function toggleMobileMenu() {
+//     refs.mobileMenu.classList.toggle('is-hidden');
+//   }
+// })();
+
+const modal = document.getElementById('myModal');
+
+const btn = document.getElementById('myBtn');
+
+const span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function () {
+  modal.style.display = 'block';
 };
 
-// close the modal when the close button and overlay is clicked
-closeModalBtn.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
+span.onclick = function () {
+  modal.style.display = 'none';
+};
 
-// close modal when the Esc key is pressed
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
   }
-});
-
-// open modal function
-const openModal = function () {
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
 };
-// open modal event
-openModalBtn.addEventListener('click', openModal);

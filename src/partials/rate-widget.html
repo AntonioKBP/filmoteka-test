@@ -1,32 +1,17 @@
-<section class="modal hidden"></section>
-<div class="overlay hidden"></div>
-<button class="btn btn-open">
-  <svg>
-    <use href="/src/images/logo/icon-for-comment.svg"></use>
-  </svg>
-</button>
+<button id="myBtn">Открыть окно</button>
 
-<section class="modal hidden">
-  <div class="flex">
-    <img
-      src="https://avatars.githubusercontent.com/u/62628408?s=96&v=4"
-      width="50px"
-      height="50px"
-      alt="user"
-    />
-    <button class="btn-close">⨉</button>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Шапка модального окна</h2>
+    </div>
+    <div class="modal-body">
+      <p>Какой-то текст в теле модального окна</p>
+      <p>Ещё другой текст...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Футер модального окна</h3>
+    </div>
   </div>
-  <div>
-    <h3>Stay in touch</h3>
-    <p>
-      This is a dummy newsletter form so don't bother trying to test it. Not
-      that I expect you to, anyways. :)
-    </p>
-  </div>
-
-  <input type="email" id="email" placeholder="brendaneich@js.com" />
-  <button class="btn">Do Something</button>
-</section>
-
-<div class="overlay hidden"></div>
-<button class="btn btn-open">Open Modal</button>
+</div>
