@@ -54,6 +54,9 @@
 // }
 
 #myBtn {
+  position: fixed;
+  top: 100px;
+  left: 15px;
   background-color: #9c27b0;
   color: white;
   padding: 12px 16px;
@@ -80,18 +83,133 @@
 
 .modal-content {
   position: relative;
-  background-color: #e1bee7;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   margin: auto;
   padding: 0;
-  border: 5px solid #7b1fa2;
-  width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #322e2e;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  width: 400px;
+
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
 
+.post-message-text {
+  font-size: 26px;
+  color: #666;
+  font-weight: 500;
+}
+
+.modal-content form {
+  display: none;
+}
+input:checked ~ form {
+  display: block;
+}
+
+.rate-widget__input {
+  display: none;
+  justify-content: center;
+}
+
+.rate-widget label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+
+.rate-widget__input:not(:checked) ~ label:hover,
+.rate-widget__input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+
+.rate-widget__input:checked ~ label {
+  color: #fd4;
+}
+.rate-widget__input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+.rate-widget__submit-text {
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+input#rate-1:checked ~ form h1:before {
+  content: 'I hate it';
+}
+input#rate-2:checked ~ form h1:before {
+  content: "I don't like it";
+}
+input#rate-3:checked ~ form h1:before {
+  content: "It's OK";
+}
+input#rate-4:checked ~ form h1:before {
+  content: "It's Awseome";
+}
+input#rate-5:checked ~ form h1:before {
+  content: 'I Love your Site';
+}
+.rate-widget__textarea {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+.rate-widget__textarea-text {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.rate-widget__btn-thumb {
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.rate-widget__btn {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.rate-widget__btn:hover {
+  background: #1b1b1b;
+  transition: all 0.3 ease;
+}
 @-webkit-keyframes animatetop {
   from {
     top: -300px;

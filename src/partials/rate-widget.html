@@ -2,16 +2,30 @@
 
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Шапка модального окна</h2>
-    </div>
-    <div class="modal-body">
-      <p>Какой-то текст в теле модального окна</p>
-      <p>Ещё другой текст...</p>
-    </div>
-    <div class="modal-footer">
-      <h3>Футер модального окна</h3>
+    <div class="rate-widget">
+      <input class="rate-widget__input" type="radio" name="rate" id="rate-5" />
+      <label for="rate-5" class="fas fa-star"></label>
+      <input class="rate-widget__input" type="radio" name="rate" id="rate-4" />
+      <label for="rate-4" class="fas fa-star"></label>
+      <input class="rate-widget__input" type="radio" name="rate" id="rate-3" />
+      <label for="rate-3" class="fas fa-star"></label>
+      <input class="rate-widget__input" type="radio" name="rate" id="rate-2" />
+      <label for="rate-2" class="fas fa-star"></label>
+      <input class="rate-widget__input" type="radio" name="rate" id="rate-1" />
+      <label for="rate-1" class="fas fa-star"></label>
+      <form action="#">
+        <h1 class="rate-widget__submit-text"></h1>
+        <div class="rate-widget__textarea">
+          <textarea
+            class="rate-widget__textarea-text"
+            cols="30"
+            placeholder="Describe your decision please..."
+          ></textarea>
+        </div>
+        <div class="rate-widget__btn-thumb">
+          <button class="rate-widget__btn" type="submit">Post</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
