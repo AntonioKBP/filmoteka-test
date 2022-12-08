@@ -53,18 +53,15 @@
 //   width: 100%;
 // }
 
-#myBtn {
+.rate-widget-open-btn {
+}
+.rate-widget-open-btn-icon {
   position: fixed;
   top: 100px;
   left: 15px;
-  background-color: #9c27b0;
-  color: white;
-  padding: 12px 16px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
-  width: 180px;
 }
 
 .modal {
@@ -232,32 +229,32 @@ input#rate-5:checked ~ form h1:before {
   }
 }
 
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+// .close {
+//   color: white;
+//   float: right;
+//   font-size: 28px;
+//   font-weight: bold;
+// }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+// .close:hover,
+// .close:focus {
+//   color: #000;
+//   text-decoration: none;
+//   cursor: pointer;
+// }
 
-.modal-header {
-  padding: 2px 16px;
-  background-color: #9c27b0;
-  color: white;
-}
+// .modal-header {
+//   padding: 2px 16px;
+//   background-color: #9c27b0;
+//   color: white;
+// }
 
-.modal-body {
-  padding: 2px 16px;
-}
+// .modal-body {
+//   padding: 2px 16px;
+// }
 
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #9c27b0;
-  color: white;
-}
+// .modal-footer {
+//   padding: 2px 16px;
+//   background-color: #9c27b0;
+//   color: white;
+// }
