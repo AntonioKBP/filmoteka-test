@@ -59,9 +59,59 @@
   position: fixed;
   top: 100px;
   left: 15px;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+  animation: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+  @media screen and (min-width: 768px) {
+    left: 30px;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+  }
+  @media screen and (min-width: 1200px) {
+    left: 50px;
+    bottom: 50px;
+    width: 70px;
+    height: 70px;
+  }
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.icon-icecream {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 19px;
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+  animation: heartBeat;
+  fill: var(--colorText-primary);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  @media screen and (min-width: 768px) {
+    left: 30px;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+  }
+  @media screen and (min-width: 1200px) {
+    left: 50px;
+    bottom: 50px;
+    width: 70px;
+    height: 70px;
+  }
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
 .modal {
